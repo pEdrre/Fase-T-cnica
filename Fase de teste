@@ -1,0 +1,72 @@
+int INDICE = 13, SOMA = 0, K = 0; 
+Enquanto K < INDICE faça { 
+    K = K + 1; 
+    SOMA = SOMA + K; 
+} 
+Imprimir(SOMA);
+
+
+def pertence_fibonacci(num):
+    a, b = 0, 1
+    while a < num:
+        a, b = b, a + b
+    return a == num
+
+numero = int(input("Informe um número: "))
+if pertence_fibonacci(numero):
+    print(f"{numero} pertence à sequência de Fibonacci.")
+else:
+    print(f"{numero} não pertence à sequência de Fibonacci.")
+
+
+import json
+
+# Exemplo de dados de faturamento
+dados = '''
+{
+    "faturamento": [1500, 2000, 0, 3000, 0, 500, 6000]
+}
+'''
+
+faturamento = json.loads(dados)['faturamento']
+faturamento = [valor for valor in faturamento if valor > 0]
+
+menor = min(faturamento)
+maior = max(faturamento)
+media = sum(faturamento) / len(faturamento)
+
+dias_acima_media = sum(1 for valor in faturamento if valor > media)
+
+print(f'Menor faturamento: R${menor:.2f}')
+print(f'Maior faturamento: R${maior:.2f}')
+print(f'Dias acima da média: {dias_acima_media}')
+
+
+faturamento_estados = {
+    "SP": 67836.43,
+    "RJ": 36678.66,
+    "MG": 29229.88,
+    "ES": 27165.48,
+    "Outros": 19849.53
+}
+
+total = sum(faturamento_estados.values())
+percentuais = {estado: (valor / total) * 100 for estado, valor in faturamento_estados.items()}
+
+for estado, percentual in percentuais.items():
+    print(f'{estado}: {percentual:.
+
+
+def inverter_string(s):
+    resultado = ""
+    for char in s:
+        resultado = char + resultado
+    return resultado
+
+string = input("Informe uma string: ")
+print(f'String invertida: {inverter_string(string)}')
+
+
+Este trabalho apresentou diversas abordagens para resolver problemas comuns em programação, 
+utilizando a linguagem Python. As soluções demonstram desde cálculos simples até a manipulação de dados,
+evidenciando a versatilidade e a aplicabilidade da programação no dia a dia.
